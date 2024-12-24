@@ -9,7 +9,7 @@ rds_client = boto3.client('rds')
 s3_client = boto3.client('s3')
 
 # SNS Topic ARN (replace with your ARN)
-SNS_TOPIC_ARN = 'arn:aws:sns:ca-central-1:058264270488:InstanceResizingNotifications'
+SNS_TOPIC_ARN = 'arn:aws:sns:ca-central-1:***:****'
 
 # Thresholds
 CPU_THRESHOLD = 10  # CPU usage threshold (%)
