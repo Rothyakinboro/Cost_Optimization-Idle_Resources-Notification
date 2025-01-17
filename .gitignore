@@ -1,0 +1,33 @@
+# Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Local overrides and configurations
+override.tf
+override.tf.json
+terraform.tfvars
+terraform.tfvars.json
+*.tfvars
+
+# Crash logs
+crash.log
+
+# .terraform directories
+.terraform/
+
+# Exclude the sensitive output file
+*.tfplan
+*.tfplan.*
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*~
+*.bak
+*.tmp
+
+# Terraform modules
+.terraform.lock.hcl
+/builds
