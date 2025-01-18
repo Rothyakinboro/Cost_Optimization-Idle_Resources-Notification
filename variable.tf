@@ -12,7 +12,7 @@ variable "region" {
 variable "sns-name" {
   description = "SNS Topic name, to be used for notification"
   type        = string
-  default     = ""
+  default     = "test-prj"
 }
 
 variable "tags" {
@@ -21,7 +21,7 @@ variable "tags" {
 
   default = {
     Project     = "Idle-Resources-Notification"
-    Environment = "Dev"
+    Environment = ""
   }
 }
 

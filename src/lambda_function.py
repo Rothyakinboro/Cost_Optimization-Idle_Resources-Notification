@@ -10,7 +10,7 @@ rds_client = boto3.client('rds')
 s3_client = boto3.client('s3')
 
 # SNS Topic ARN (replace with your ARN)
-sns_topic_arn = os.environ['SNS_TOPIC_ARN']  # Fetch SNS ARN from environment variable
+topic_arn = os.environ['topic_arn']  # Fetch SNS ARN from environment variable
 
 # Thresholds
 CPU_THRESHOLD = 10  # CPU usage threshold (%)
@@ -103,7 +103,7 @@ def notify_smes(idle_resources):
                 message += f"{resource_type}:\n" + "\n".join(resources) + "\n\n"
         
         sns_client.publish(
-            TopicArn=SNS_TOPIC_ARN,
+            TopicArn=topic_arn,
             Subject='Idle AWS Resources Notification',
             Message=message
         )
