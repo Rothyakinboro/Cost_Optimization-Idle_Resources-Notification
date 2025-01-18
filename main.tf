@@ -20,6 +20,7 @@ module "lambda_function" {
         "s3:*",
         "s3:ListBucket",
         "ec2:DescribeInstances",
+        "sns:Publish",
         "ec2:DescribeVolumes",
         "rds:DescribeDBInstances",
         "cloudwatch:GetMetricData",
@@ -31,7 +32,7 @@ module "lambda_function" {
     }
   }
   environment_variables = {
-    sns_topic_arn = module.sns_topic.topic_arn
+    topic_arn = module.sns_topic.topic_arn
   }
 
   tags = var.tags
